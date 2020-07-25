@@ -14,7 +14,7 @@ public class ProcessPGCD {
 
     public static int thePgcd(int a, int b) {
 
-        if (a == 0 || b == 0) { return OptionalInt.of(0).getAsInt(); }
+        if (a == 0 || b == 0) { return 0; }
         diviseurA = IntStream.rangeClosed(1, a).filter(el -> a % el == 0).boxed().collect(Collectors.toList());
         diviseurB = IntStream.rangeClosed(1, b).filter(el -> a % el == 0).boxed().collect(Collectors.toList());
         communDivs = diviseurA.stream().filter(el -> diviseurB.contains(el)).collect(Collectors.toList());
