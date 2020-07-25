@@ -12,7 +12,7 @@ public class ProcessPGCD {
     static List<Integer> diviseurB = new ArrayList<>();
     static List<Integer> communDivs = new ArrayList<>();
 
-    public static int thePgcd(int a, int b) {
+    public  int thePgcd(int a, int b) {
 
         if (a == 0 || b == 0) { return 0; }
         diviseurA = IntStream.rangeClosed(1, a).filter(el -> a % el == 0).boxed().collect(Collectors.toList());
@@ -22,9 +22,5 @@ public class ProcessPGCD {
         return max.getAsInt();
     }
 
-
-    public static void main(String[] args) {
-        System.out.println(thePgcd(100, 50));
-    }
 
 }
